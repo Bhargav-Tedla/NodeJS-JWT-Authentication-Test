@@ -22,9 +22,9 @@
                 <label for = "password">password</label>
                 <input type="password" name="password" id="password">
             </div> 
-            <button value = "loginpage" onclick="login()">Login</button>
-            <button value = "dashboard" onclick="getDashboard()">Get Dashboard</button>
-            <button value = "settingspage" onclick="Settings()">Settings</button>
+            <button  onclick="login()">Login</button>
+            <button  onclick="getDashboard()">Get Dashboard</button>
+            <button  onclick="Settings()">Settings</button>
 
         </main>
 
@@ -87,7 +87,7 @@
             }
         }).then(res => {
             if (res && res.data && res.data.success) {
-                ChangeUrl('settingspage', 'Settings.html');
+                ChangeUrl(' ', 'Settings.html');
                 document.querySelector('h1.row').innerHTML = 'Settings';
                 document.querySelector('main').innerHTML = res.data.myContent;
 
@@ -95,7 +95,7 @@
                         window.location.href = "/";
                         localStorage.clear();
                        
-                    }, 60000);
+                    }, 180000);
 
                 
             }
